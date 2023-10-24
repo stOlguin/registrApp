@@ -1,0 +1,36 @@
+<app-header [isNotHome]="isNotHome" [pageTitle]="pageTitle"></app-header>
+
+<ion-content>
+  <img src="../../../assets/icon/Rick_and_Morty.svg.png" alt="logo">
+  <ion-list>
+      <ion-item *ngFor="let character of characters">
+        <ion-card>
+          <img alt="" src="{{character.image}}" />
+          <ion-card-header>
+            <ion-card-title>{{character.name}}</ion-card-title>
+            <ion-card-subtitle>{{character.species}}</ion-card-subtitle>  
+          </ion-card-header>
+          <ion-card-content>
+            <h2>Status: {{character.status}}</h2>
+          </ion-card-content>
+        </ion-card>
+      </ion-item>
+  </ion-list>
+
+  <ion-fab horizontal="start" vertical="bottom" slot="fixed">
+    <ion-fab-button color="warning">
+      <ion-icon name="arrow-up-circle"></ion-icon>
+    </ion-fab-button>
+    <ion-fab-list side="top">
+      <ion-fab-button color="warning" (click)="goHome()">
+        <ion-icon name="home-outline"></ion-icon>
+      </ion-fab-button>
+      <ion-fab-button color="warning" (click)="goAbout()">
+        <ion-icon name="accessibility-outline"></ion-icon>
+      </ion-fab-button>
+      <ion-fab-button color="warning" (click)="goApi()">
+        <ion-icon name="planet-outline"></ion-icon>
+      </ion-fab-button>
+    </ion-fab-list>
+  </ion-fab>
+</ion-content>

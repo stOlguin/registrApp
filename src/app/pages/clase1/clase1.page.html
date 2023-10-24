@@ -1,0 +1,46 @@
+<app-header [isNotHome]="isNotHome" [pageTitle]="pageTitle"></app-header>
+
+<ion-content>
+  <form [formGroup]="formularioAsistencia" (ngSubmit)="onSubmit()" style="margin-top: 2rem;">
+    <header style="padding-left: 0.9rem;">INGRESA TUS DATOS:</header>
+      <ion-list>
+        <ion-item>
+          <ion-input labelPlacement="floating" class="form-control" formControlName="rut">
+            <div slot="label">Rut</div>
+          </ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-input labelPlacement="floating" class="form-control" formControlName="nombre">
+            <div slot="label">Nombre</div>
+          </ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-input labelPlacement="floating" class="form-control" formControlName="apellidop">
+            <div slot="label">Primer Apellido</div>
+          </ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-input labelPlacement="floating" class="form-control" formControlName="apellidom">
+            <div slot="label">Segundo Apellido</div>
+          </ion-input>
+        </ion-item>
+      </ion-list>
+    <input type="submit" value="Enviar" class="btn btn-info" style="margin-left: 0.9rem;">
+  </form>
+  <ion-item>
+    <ion-input type="text" labelPlacement="floating" [(ngModel)]="codigo.id">
+      <div slot="label">Codigo Clase</div>
+    </ion-input>
+  </ion-item>
+
+  <ion-card>
+    <ion-card-content>
+      <ion-card-header>Lista de Asistentes:</ion-card-header>
+        <ion-list>
+          <ion-item *ngFor="let alumno of alumnos">
+            <h2>{{alumno.rut}} / {{alumno.nombre}} {{alumno.apellidop}}</h2>
+          </ion-item>
+        </ion-list>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

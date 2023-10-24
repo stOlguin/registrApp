@@ -1,0 +1,47 @@
+<app-header [isNotHome]="isNotHome" [pageTitle]="pageTitle"></app-header>
+
+<ion-content>
+  <h1 class="titulo-about">Nuestro Equipo</h1>
+  <ion-card>
+    <ion-card-header>
+      <img class="img-card" src="../../../assets/img/foto-card2.png" alt="Foto">
+      <ion-card-title class="titulo-card">Thomas Salazar</ion-card-title>
+      <ion-card-subtitle>20 años, Estudiante Ingenieria en Informatica</ion-card-subtitle>
+    </ion-card-header>
+  
+    <ion-card-content>
+      Keep close to Nature's heart... and break clear away, once in awhile,
+      and climb a mountain or spend a week in the woods. Wash your spirit clean.
+    </ion-card-content>
+  </ion-card>  
+
+  <ion-card>
+    <ion-card-header>
+      <img class="img-card" src="../../../assets/img/foto-card.jpg" alt="Foto">
+      <ion-card-title class="titulo-card">Steven Olguin</ion-card-title>
+      <ion-card-subtitle>23 años, Estudiante Ingenieria en Informatica</ion-card-subtitle>
+    </ion-card-header>
+  
+    <ion-card-content>
+      Keep close to Nature's heart... and break clear away, once in awhile,
+      and climb a mountain or spend a week in the woods. Wash your spirit clean.
+    </ion-card-content>
+  </ion-card>  
+
+  <ion-fab horizontal="start" vertical="bottom" slot="fixed">
+    <ion-fab-button color="warning">
+      <ion-icon name="arrow-up-circle"></ion-icon>
+    </ion-fab-button>
+    <ion-fab-list side="top">
+      <ion-fab-button color="warning" (click)="goHome()">
+        <ion-icon name="home-outline"></ion-icon>
+      </ion-fab-button>
+      <ion-fab-button color="warning" (click)="goAbout()">
+        <ion-icon name="accessibility-outline"></ion-icon>
+      </ion-fab-button>
+      <ion-fab-button color="warning" (click)="goApi()">
+        <ion-icon name="planet-outline"></ion-icon>
+      </ion-fab-button>
+    </ion-fab-list>
+  </ion-fab>
+</ion-content>

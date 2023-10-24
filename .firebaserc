@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "registrapp-da082"
+  },
+  "targets": {
+    "registrapp-da082": {
+      "hosting": {
+        "app": [
+          "registrapp-da082"
+        ]
+      }
+    }
+  }
+}

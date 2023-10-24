@@ -1,0 +1,64 @@
+<app-header [isNotHome]="isNotHome" [pageTitle]="pageTitle"></app-header>
+<ion-content>
+  <ion-card class="mtop">
+    <ion-card-header>
+
+      <img class="img-card" src="../../../assets/img/logo.jpg" alt="Foto">
+      <ion-card-subtitle></ion-card-subtitle>
+    </ion-card-header>
+  
+    <ion-card-content>
+      <ion-buttons slot="secondary">
+        <ion-button color ="warning" fill="solid" (click)="getPicture()">
+          <ion-icon slot="start" name="camera-outline"></ion-icon>
+          Escanear Codigo
+        </ion-button>
+      </ion-buttons>
+    </ion-card-content>
+  </ion-card> 
+  <h1 style="margin-left: 0.9rem;">Asignaturas:</h1>
+  <ion-accordion-group style="padding-bottom: 6rem;">
+  <ion-accordion value="first">
+    <ion-item slot="header" color="light">
+      <ion-label>Proceso de Portafolio 4</ion-label>
+    </ion-item>
+    <div class="ion-padding" slot="content"><a href="/clase1" style="color: white;">Asistencia Portafolio Clase 1</a></div>
+    <div class="ion-padding" slot="content"><a href="/clase1" style="color: white;">Asistencia Portafolio Clase 2</a></div>
+    <div class="ion-padding" slot="content"><a href="/clase1" style="color: white;">Asistencia Portafolio Clase 3</a></div>
+    <div class="ion-padding" slot="content"><a href="/clase1" style="color: white;">Asistencia Portafolio Clase 4</a></div>
+  </ion-accordion>
+  <ion-accordion value="second">
+    <ion-item slot="header" color="light">
+      <ion-label>Arquitectura</ion-label>
+    </ion-item>
+    <div class="ion-padding" slot="content">Second Content</div>
+  </ion-accordion>
+  <ion-accordion value="third">
+    <ion-item slot="header" color="light">
+      <ion-label>Estadistica Descriptiva</ion-label>
+    </ion-item>
+    <div class="ion-padding" slot="content">Third Content</div>
+  </ion-accordion>
+</ion-accordion-group>
+  
+  <ion-fab horizontal="start" vertical="bottom" slot="fixed">
+    <ion-fab-button color="warning">
+      <ion-icon name="arrow-up-circle"></ion-icon>
+    </ion-fab-button>
+    <ion-fab-list side="top">
+      <ion-fab-button color="warning" (click)="goHome()">
+        <ion-icon name="home-outline"></ion-icon>
+      </ion-fab-button>
+      <ion-fab-button color="warning" (click)="goAbout()">
+        <ion-icon name="accessibility-outline"></ion-icon>
+      </ion-fab-button>
+      <ion-fab-button color="warning" (click)="goApi()">
+        <ion-icon name="planet-outline"></ion-icon>
+      </ion-fab-button>
+    </ion-fab-list>
+  </ion-fab>
+  <div vertical="end" horizontal="end" slot="fixed">
+    <input class="btn-cerrar" color="warning" (click)="onClickLogout()" value="Cerrar Sesion" class="btn" type="submit">
+  </div>
+
+</ion-content>

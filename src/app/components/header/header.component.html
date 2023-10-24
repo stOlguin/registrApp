@@ -1,0 +1,11 @@
+<ion-header>
+    <ion-toolbar color="Blank">
+      <ion-buttons *ngIf="isNotHome" slot="start">
+        <ion-button (click)="onClickBack()" color="warning">Volver</ion-button>
+      </ion-buttons>
+  
+      <ion-title class="ion-text-capitalize" color="#ffffff">{{pageTitle}}</ion-title>
+      <img class="logo" src="https://www.duoc.cl/wp-content/themes/wordpress-duoc-cl/images/logo-duoc.svg" alt="Logo Duoc">
+    </ion-toolbar>
+  </ion-header>
+  
